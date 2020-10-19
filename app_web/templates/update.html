@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceId</title>
+
+    <h1>Добавление пользователя в систему</h1>
+    <p><a href = "{{URL}}/update/{{user.personId}}/deluser/" >Удалить пользователя</a></p>
+
+    <form action="{{user.personId}}" method=post enctype=multipart/form-data>
+        <p>Фамилия: <input type="text" size="40" placeholder="{{user.last_name}}" name=last_name></p>
+        <p>Имя: <input type="text" size="40" placeholder="{{user.first_name}}" name=first_name></p>
+        <p>Отчество: <input type="text" size="40" placeholder="{{user.middle_name}}" name=middle_name></p>
+        <p>Права доступа: <input type="text" size="40" placeholder="{{user.mode_skip}}" name=mode_skip></p>
+        <p>Уникальный идентификатор: <input type="text" size="40" placeholder="{{user.personId}}" name=personId disabled></p>
+
+        <p>Фото для обучения:</p>
+        <p> <input type=file name=photos multiple=""></p>
+        <p><input type=submit value=Загрузить></p>
+    </form>
+
+
+</head>
+<body>
+
+</body>
+</html>

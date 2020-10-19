@@ -1,0 +1,19 @@
+[Unit]
+Description=recognition_web
+After=multi-user.target
+Conflicts=getty@tty1.service
+StartLimitBurst=5
+StartLimitIntervalSec=33
+
+[Service]
+SyslogIdentifier=door_server
+
+Restart=always
+RestartSec=20
+Type=simple
+WorkingDirectory=/home/pi/project/recognition_door_web
+ExecStart=/home/pi/project/venvs/thermoBox/bin/python3 run.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
